@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\richardrubert\Desktop\Command\Command\CommandTop.ncd
+OUTFILE=C:\Users\richardrubert\Desktop\Command\Command\CommandTop.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\richardrubert\Desktop\Command\Command
+LICENSE=WebPack
+USER_INFO=211365641_0_0_531

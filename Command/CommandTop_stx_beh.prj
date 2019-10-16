@@ -1,0 +1,8 @@
+vhdl isim_temp "vga.vhd"
+vhdl isim_temp "ps2.vhd"
+vhdl isim_temp "PixDec.vhd"
+vhdl isim_temp "mouse.vhd"
+vhdl isim_temp "FrBuf.vhd"
+vhdl isim_temp "clock_ctrl.vhd"
+vhdl isim_temp "Bomb.vhd"
+vhdl isim_temp "CommandTop.vhd"

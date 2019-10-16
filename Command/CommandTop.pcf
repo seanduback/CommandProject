@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 13 12:40:34 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "red" LOCATE = SITE "H14" LEVEL 1;
+COMP "blue" LOCATE = SITE "G15" LEVEL 1;
+COMP "ps2_clk" LOCATE = SITE "G14" LEVEL 1;
+COMP "green" LOCATE = SITE "H15" LEVEL 1;
+COMP "hsync" LOCATE = SITE "F15" LEVEL 1;
+COMP "reset" LOCATE = SITE "K17" LEVEL 1;
+COMP "vsync" LOCATE = SITE "F14" LEVEL 1;
+COMP "ps2_data" LOCATE = SITE "G13" LEVEL 1;
+NET "C1/Clk1" PERIOD = 20 ns HIGH 40%;
+SCHEMATIC END;
+

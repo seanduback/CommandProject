@@ -1,0 +1,8 @@
+vhdl work "vga.vhd"
+vhdl work "ps2.vhd"
+vhdl work "PixDec.vhd"
+vhdl work "mouse.vhd"
+vhdl work "FrBuf.vhd"
+vhdl work "clock_ctrl.vhd"
+vhdl work "Bomb.vhd"
+vhdl work "CommandTop.vhd"

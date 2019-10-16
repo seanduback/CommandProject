@@ -1,0 +1,8 @@
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\vga.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\ps2.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\PixDec.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\mouse.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\FrBuf.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\clock_ctrl.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\Bomb.vhd"
+vhdl work "C:\Users\richardrubert\Desktop\Command\Command\CommandTop.vhd"

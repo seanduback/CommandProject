@@ -1,0 +1,1048 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: CommandTop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CommandTop.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CommandTop"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : CommandTop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/vga.vhd" in Library work.
+Architecture behavioral of Entity vga is up to date.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/clock_ctrl.vhd" in Library work.
+Architecture behavioral of Entity clock_ctrl is up to date.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/FrBuf.vhd" in Library work.
+Architecture behavioral of Entity frbuf is up to date.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/PixDec.vhd" in Library work.
+Entity <pixdec> compiled.
+Entity <pixdec> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" in Library work.
+Architecture behavioral of Entity bomb is up to date.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/ps2.vhd" in Library work.
+Architecture behavioral of Entity ps2 is up to date.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/mouse.vhd" in Library work.
+Architecture behavioral of Entity mouse is up to date.
+Compiling vhdl file "C:/Users/richardrubert/Desktop/Command/Command/CommandTop.vhd" in Library work.
+Architecture behavioral of Entity commandtop is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CommandTop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clock_ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FrBuf> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PixDec> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Bomb> in library <work> (architecture <behavioral>) with generics.
+	start_column = 180
+	start_time = 160
+
+Analyzing hierarchy for entity <Bomb> in library <work> (architecture <behavioral>) with generics.
+	start_column = 260
+	start_time = 90
+
+Analyzing hierarchy for entity <Bomb> in library <work> (architecture <behavioral>) with generics.
+	start_column = 340
+	start_time = 150
+
+Analyzing hierarchy for entity <Bomb> in library <work> (architecture <behavioral>) with generics.
+	start_column = 420
+	start_time = 120
+
+Analyzing hierarchy for entity <ps2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mouse> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CommandTop> in library <work> (Architecture <behavioral>).
+Entity <CommandTop> analyzed. Unit <CommandTop> generated.
+
+Analyzing Entity <vga> in library <work> (Architecture <behavioral>).
+Entity <vga> analyzed. Unit <vga> generated.
+
+Analyzing Entity <clock_ctrl> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <IBUFG_inst> in unit <clock_ctrl>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <IBUFG_inst> in unit <clock_ctrl>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <IBUFG_inst> in unit <clock_ctrl>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IBUFG_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLKFX_DIVIDE =  27" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLKFX_MULTIPLY =  17" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_inst> in unit <clock_ctrl>.
+Entity <clock_ctrl> analyzed. Unit <clock_ctrl> generated.
+
+Analyzing Entity <FrBuf> in library <work> (Architecture <behavioral>).
+Entity <FrBuf> analyzed. Unit <FrBuf> generated.
+
+Analyzing Entity <PixDec> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/richardrubert/Desktop/Command/Command/PixDec.vhd" line 91: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <over>
+Entity <PixDec> analyzed. Unit <PixDec> generated.
+
+Analyzing generic Entity <Bomb.1> in library <work> (Architecture <behavioral>).
+	start_column = 180
+	start_time = 160
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 102: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start>
+Entity <Bomb.1> analyzed. Unit <Bomb.1> generated.
+
+Analyzing generic Entity <Bomb.2> in library <work> (Architecture <behavioral>).
+	start_column = 260
+	start_time = 90
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 102: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start>
+Entity <Bomb.2> analyzed. Unit <Bomb.2> generated.
+
+Analyzing generic Entity <Bomb.3> in library <work> (Architecture <behavioral>).
+	start_column = 340
+	start_time = 150
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 102: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start>
+Entity <Bomb.3> analyzed. Unit <Bomb.3> generated.
+
+Analyzing generic Entity <Bomb.4> in library <work> (Architecture <behavioral>).
+	start_column = 420
+	start_time = 120
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 123: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd" line 102: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start>
+Entity <Bomb.4> analyzed. Unit <Bomb.4> generated.
+
+Analyzing Entity <ps2> in library <work> (Architecture <behavioral>).
+Entity <ps2> analyzed. Unit <ps2> generated.
+
+Analyzing Entity <mouse> in library <work> (Architecture <behavioral>).
+Entity <mouse> analyzed. Unit <mouse> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <vga>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/vga.vhd".
+    Found 1-bit register for signal <vsync>.
+    Found 1-bit register for signal <hsync>.
+    Found 1-bit register for signal <Hblank>.
+    Found 10-bit up counter for signal <Hcount>.
+    Found 1-bit register for signal <Vblank>.
+    Found 10-bit up counter for signal <Vcount>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <vga> synthesized.
+
+
+Synthesizing Unit <FrBuf>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/FrBuf.vhd".
+WARNING:Xst:647 - Input <row<9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <nrow> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 16384x20-bit ROM for signal <mem_out$rom0000> created at line 1501.
+    Found 20-bit register for signal <mem_out>.
+    Found 20-bit register for signal <pixel_vec>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  40 D-type flip-flop(s).
+Unit <FrBuf> synthesized.
+
+
+Synthesizing Unit <PixDec>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/PixDec.vhd".
+WARNING:Xst:647 - Input <right> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <ustrobe> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <flag_exp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Q> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <N> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 9-bit adder for signal <$add0000> created at line 145.
+    Found 6x6-bit multiplier for signal <$mult0000> created at line 186.
+    Found 6x6-bit multiplier for signal <$mult0001> created at line 186.
+    Found 5x5-bit multiplier for signal <$mult0002> created at line 186.
+    Found 10-bit register for signal <ax>.
+    Found 10-bit register for signal <ay>.
+    Found 1-bit register for signal <dot>.
+    Found 10-bit adder for signal <dot$addsub0000> created at line 145.
+    Found 11-bit subtractor for signal <dot$addsub0001> created at line 145.
+    Found 10-bit subtractor for signal <dot$addsub0002> created at line 145.
+    Found 10-bit comparator greatequal for signal <dot$cmp_ge0000> created at line 145.
+    Found 10-bit comparator greatequal for signal <dot$cmp_ge0001> created at line 145.
+    Found 11-bit comparator lessequal for signal <dot$cmp_le0000> created at line 145.
+    Found 10-bit comparator lessequal for signal <dot$cmp_le0001> created at line 145.
+    Found 10-bit comparator not equal for signal <dot$cmp_ne0000> created at line 148.
+    Found 10-bit comparator not equal for signal <dot$cmp_ne0001> created at line 148.
+    Found 1-bit register for signal <draw_exp>.
+    Found 11-bit subtractor for signal <draw_exp$addsub0001> created at line 183.
+    Found 11-bit subtractor for signal <draw_exp$addsub0003> created at line 183.
+    Found 13-bit adder for signal <draw_exp$addsub0004> created at line 186.
+    Found 10-bit adder carry out for signal <draw_exp$addsub0005> created at line 183.
+    Found 10-bit adder carry out for signal <draw_exp$addsub0006> created at line 183.
+    Found 11-bit comparator greatequal for signal <draw_exp$cmp_ge0000> created at line 183.
+    Found 11-bit comparator greatequal for signal <draw_exp$cmp_ge0001> created at line 183.
+    Found 13-bit comparator greatequal for signal <draw_exp$cmp_ge0002> created at line 186.
+    Found 11-bit comparator lessequal for signal <draw_exp$cmp_le0000> created at line 183.
+    Found 11-bit comparator lessequal for signal <draw_exp$cmp_le0001> created at line 183.
+    Found 1-bit register for signal <iedge>.
+    Found 6-bit subtractor for signal <mult0000$addsub0000> created at line 184.
+    Found 6-bit subtractor for signal <mult0001$addsub0000> created at line 185.
+    Found 1-bit register for signal <over>.
+    Found 5-bit register for signal <r>.
+    Found 5-bit addsub for signal <r$share0000> created at line 163.
+    Found 25-bit register for signal <ucount>.
+    Found 25-bit adder for signal <ucount$addsub0000> created at line 165.
+    Found 25-bit comparator greatequal for signal <ucount$cmp_ge0000> created at line 163.
+    Found 25-bit comparator less for signal <ucount$cmp_lt0000> created at line 163.
+    Found 9-bit adder for signal <y>.
+    Summary:
+	inferred  54 D-type flip-flop(s).
+	inferred  14 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+	inferred  13 Comparator(s).
+Unit <PixDec> synthesized.
+
+
+Synthesizing Unit <Bomb_1>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <c>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 15x7-bit ROM for signal <$mux0000> created at line 123.
+    Found 1-bit register for signal <crater>.
+    Found 1-bit register for signal <pix>.
+    Found 11x11-bit multiplier for signal <$mult0000> created at line 114.
+    Found 24-bit adder for signal <c$addsub0000> created at line 114.
+    Found 24-bit comparator less for signal <c$cmp_lt0000> created at line 114.
+    Found 11x11-bit multiplier for signal <c$mult0000> created at line 114.
+    Found 1-bit register for signal <center_flag>.
+    Found 9-bit comparator lessequal for signal <center_flag$cmp_le0000> created at line 177.
+    Found 10-bit comparator lessequal for signal <center_flag$cmp_le0001> created at line 177.
+    Found 8-bit up counter for signal <count>.
+    Found 1-bit register for signal <dir_flag>.
+    Found 10-bit adder for signal <dx$add0000> created at line 108.
+    Found 9-bit adder for signal <dy$add0000> created at line 107.
+    Found 11-bit subtractor for signal <dy$addsub0000> created at line 107.
+    Found 11-bit comparator less for signal <dy$cmp_lt0000> created at line 109.
+    Found 1-bit register for signal <hit>.
+    Found 1-bit register for signal <left_flag>.
+    Found 11-bit subtractor for signal <mult0000$addsub0000> created at line 108.
+    Found 10-bit comparator lessequal for signal <p$cmp_le0000> created at line 121.
+    Found 11-bit comparator lessequal for signal <p$cmp_le0001> created at line 121.
+    Found 1-bit register for signal <right_flag>.
+    Found 1-bit register for signal <start>.
+    Found 10-bit updown counter for signal <x>.
+    Found 9-bit comparator greater for signal <x$cmp_gt0000> created at line 177.
+    Found 10-bit comparator greater for signal <x$cmp_gt0001> created at line 177.
+    Found 11-bit subtractor for signal <x_sprite>.
+    Found 9-bit register for signal <y>.
+    Found 9-bit adder for signal <y$addsub0000> created at line 215.
+    Found 10-bit subtractor for signal <y_sprite>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   8 Comparator(s).
+Unit <Bomb_1> synthesized.
+
+
+Synthesizing Unit <Bomb_2>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <c>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 15x7-bit ROM for signal <$mux0000> created at line 123.
+    Found 1-bit register for signal <crater>.
+    Found 1-bit register for signal <pix>.
+    Found 11x11-bit multiplier for signal <$mult0000> created at line 114.
+    Found 24-bit adder for signal <c$addsub0000> created at line 114.
+    Found 24-bit comparator less for signal <c$cmp_lt0000> created at line 114.
+    Found 11x11-bit multiplier for signal <c$mult0000> created at line 114.
+    Found 1-bit register for signal <center_flag>.
+    Found 9-bit comparator lessequal for signal <center_flag$cmp_le0000> created at line 177.
+    Found 10-bit comparator lessequal for signal <center_flag$cmp_le0001> created at line 177.
+    Found 7-bit up counter for signal <count>.
+    Found 1-bit register for signal <dir_flag>.
+    Found 10-bit adder for signal <dx$add0000> created at line 108.
+    Found 9-bit adder for signal <dy$add0000> created at line 107.
+    Found 11-bit subtractor for signal <dy$addsub0000> created at line 107.
+    Found 11-bit comparator less for signal <dy$cmp_lt0000> created at line 109.
+    Found 1-bit register for signal <hit>.
+    Found 1-bit register for signal <left_flag>.
+    Found 11-bit subtractor for signal <mult0000$addsub0000> created at line 108.
+    Found 10-bit comparator lessequal for signal <p$cmp_le0000> created at line 121.
+    Found 11-bit comparator lessequal for signal <p$cmp_le0001> created at line 121.
+    Found 1-bit register for signal <right_flag>.
+    Found 1-bit register for signal <start>.
+    Found 10-bit updown counter for signal <x>.
+    Found 9-bit comparator greater for signal <x$cmp_gt0000> created at line 177.
+    Found 10-bit comparator greater for signal <x$cmp_gt0001> created at line 177.
+    Found 11-bit subtractor for signal <x_sprite>.
+    Found 9-bit register for signal <y>.
+    Found 9-bit adder for signal <y$addsub0000> created at line 215.
+    Found 10-bit subtractor for signal <y_sprite>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   8 Comparator(s).
+Unit <Bomb_2> synthesized.
+
+
+Synthesizing Unit <Bomb_3>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <c>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 15x7-bit ROM for signal <$mux0000> created at line 123.
+    Found 1-bit register for signal <crater>.
+    Found 1-bit register for signal <pix>.
+    Found 11x11-bit multiplier for signal <$mult0000> created at line 114.
+    Found 24-bit adder for signal <c$addsub0000> created at line 114.
+    Found 24-bit comparator less for signal <c$cmp_lt0000> created at line 114.
+    Found 11x11-bit multiplier for signal <c$mult0000> created at line 114.
+    Found 1-bit register for signal <center_flag>.
+    Found 9-bit comparator lessequal for signal <center_flag$cmp_le0000> created at line 177.
+    Found 10-bit comparator lessequal for signal <center_flag$cmp_le0001> created at line 177.
+    Found 8-bit up counter for signal <count>.
+    Found 1-bit register for signal <dir_flag>.
+    Found 10-bit adder for signal <dx$add0000> created at line 108.
+    Found 9-bit adder for signal <dy$add0000> created at line 107.
+    Found 11-bit subtractor for signal <dy$addsub0000> created at line 107.
+    Found 11-bit comparator less for signal <dy$cmp_lt0000> created at line 109.
+    Found 1-bit register for signal <hit>.
+    Found 1-bit register for signal <left_flag>.
+    Found 11-bit subtractor for signal <mult0000$addsub0000> created at line 108.
+    Found 10-bit comparator lessequal for signal <p$cmp_le0000> created at line 121.
+    Found 11-bit comparator lessequal for signal <p$cmp_le0001> created at line 121.
+    Found 1-bit register for signal <right_flag>.
+    Found 1-bit register for signal <start>.
+    Found 10-bit updown counter for signal <x>.
+    Found 9-bit comparator greater for signal <x$cmp_gt0000> created at line 177.
+    Found 10-bit comparator greater for signal <x$cmp_gt0001> created at line 177.
+    Found 11-bit subtractor for signal <x_sprite>.
+    Found 9-bit register for signal <y>.
+    Found 9-bit adder for signal <y$addsub0000> created at line 215.
+    Found 10-bit subtractor for signal <y_sprite>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   8 Comparator(s).
+Unit <Bomb_3> synthesized.
+
+
+Synthesizing Unit <Bomb_4>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/Bomb.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <c>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 15x7-bit ROM for signal <$mux0000> created at line 123.
+    Found 1-bit register for signal <crater>.
+    Found 1-bit register for signal <pix>.
+    Found 11x11-bit multiplier for signal <$mult0000> created at line 114.
+    Found 24-bit adder for signal <c$addsub0000> created at line 114.
+    Found 24-bit comparator less for signal <c$cmp_lt0000> created at line 114.
+    Found 11x11-bit multiplier for signal <c$mult0000> created at line 114.
+    Found 1-bit register for signal <center_flag>.
+    Found 9-bit comparator lessequal for signal <center_flag$cmp_le0000> created at line 177.
+    Found 10-bit comparator lessequal for signal <center_flag$cmp_le0001> created at line 177.
+    Found 7-bit up counter for signal <count>.
+    Found 1-bit register for signal <dir_flag>.
+    Found 10-bit adder for signal <dx$add0000> created at line 108.
+    Found 9-bit adder for signal <dy$add0000> created at line 107.
+    Found 11-bit subtractor for signal <dy$addsub0000> created at line 107.
+    Found 11-bit comparator less for signal <dy$cmp_lt0000> created at line 109.
+    Found 1-bit register for signal <hit>.
+    Found 1-bit register for signal <left_flag>.
+    Found 11-bit subtractor for signal <mult0000$addsub0000> created at line 108.
+    Found 10-bit comparator lessequal for signal <p$cmp_le0000> created at line 121.
+    Found 11-bit comparator lessequal for signal <p$cmp_le0001> created at line 121.
+    Found 1-bit register for signal <right_flag>.
+    Found 1-bit register for signal <start>.
+    Found 10-bit updown counter for signal <x>.
+    Found 9-bit comparator greater for signal <x$cmp_gt0000> created at line 177.
+    Found 10-bit comparator greater for signal <x$cmp_gt0001> created at line 177.
+    Found 11-bit subtractor for signal <x_sprite>.
+    Found 9-bit register for signal <y>.
+    Found 9-bit adder for signal <y$addsub0000> created at line 215.
+    Found 10-bit subtractor for signal <y_sprite>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   8 Comparator(s).
+Unit <Bomb_4> synthesized.
+
+
+Synthesizing Unit <ps2>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/ps2.vhd".
+    Found finite state machine <FSM_0> for signal <Q>.
+    -----------------------------------------------------------------------
+    | States             | 24                                             |
+    | Transitions        | 49                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 25                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <ps2_clk>.
+    Found 1-bit tristate buffer for signal <ps2_data>.
+    Found 8-bit register for signal <A>.
+    Found 8-bit register for signal <B>.
+    Found 1-bit register for signal <clean_clk>.
+    Found 6-bit up counter for signal <count>.
+    Found 1-bit xor8 for signal <idata$xor0000> created at line 296.
+    Found 1-bit register for signal <iedge>.
+    Found 12-bit up counter for signal <ucount>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Xor(s).
+	inferred   2 Tristate(s).
+Unit <ps2> synthesized.
+
+
+Synthesizing Unit <mouse>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/mouse.vhd".
+WARNING:Xst:646 - Signal <b_reg<2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | do_reset                                       |
+    | Power Up State     | do_reset                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit register for signal <b_reg>.
+    Found 11-bit adder for signal <new_x$addsub0000> created at line 50.
+    Found 10-bit adder for signal <new_y$addsub0000> created at line 51.
+    Found 1-bit register for signal <ready>.
+    Found 10-bit register for signal <x_int>.
+    Found 11-bit comparator less for signal <x_int$cmp_lt0000> created at line 87.
+    Found 11-bit comparator less for signal <x_int$cmp_lt0001> created at line 88.
+    Found 8-bit register for signal <x_reg>.
+    Found 9-bit register for signal <y_int>.
+    Found 10-bit comparator less for signal <y_int$cmp_lt0000> created at line 95.
+    Found 10-bit comparator less for signal <y_int$cmp_lt0001> created at line 96.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <mouse> synthesized.
+
+
+Synthesizing Unit <clock_ctrl>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/clock_ctrl.vhd".
+Unit <clock_ctrl> synthesized.
+
+
+Synthesizing Unit <CommandTop>.
+    Related source file is "C:/Users/richardrubert/Desktop/Command/Command/CommandTop.vhd".
+WARNING:Xst:1780 - Signal <upward> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <leftward> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <irow> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <impact> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <icol> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dot> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <border> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <CommandTop> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 5
+ 15x7-bit ROM                                          : 4
+ 16384x20-bit ROM                                      : 1
+# Multipliers                                          : 11
+ 11x11-bit multiplier                                  : 8
+ 5x5-bit multiplier                                    : 1
+ 6x6-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 48
+ 10-bit adder                                          : 6
+ 10-bit adder carry out                                : 2
+ 10-bit subtractor                                     : 5
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 15
+ 13-bit adder                                          : 1
+ 24-bit adder                                          : 4
+ 25-bit adder                                          : 1
+ 5-bit addsub                                          : 1
+ 6-bit subtractor                                      : 2
+ 9-bit adder                                           : 10
+# Counters                                             : 12
+ 10-bit up counter                                     : 2
+ 10-bit updown counter                                 : 4
+ 12-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+ 7-bit up counter                                      : 2
+ 8-bit up counter                                      : 2
+# Registers                                            : 66
+ 1-bit register                                        : 51
+ 10-bit register                                       : 3
+ 20-bit register                                       : 2
+ 25-bit register                                       : 1
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+ 9-bit register                                        : 5
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Comparators                                          : 49
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 2
+ 10-bit comparator lessequal                           : 9
+ 10-bit comparator not equal                           : 2
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 6
+ 11-bit comparator lessequal                           : 7
+ 13-bit comparator greatequal                          : 1
+ 24-bit comparator less                                : 4
+ 25-bit comparator greatequal                          : 1
+ 25-bit comparator less                                : 1
+ 9-bit comparator greater                              : 4
+ 9-bit comparator lessequal                            : 4
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <M1/state/FSM> on signal <state[1:4]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ do_reset  | 0000
+ awaitack1 | 0001
+ awaitaa   | 0010
+ await00   | 0011
+ do_enable | 0100
+ awaitack2 | 0101
+ awaitb    | 0110
+ awaitx    | 0111
+ awaity    | 1000
+-----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <P1/Q/FSM> on signal <Q[1:24]> with one-hot encoding.
+-------------------------------------
+ State   | Encoding
+-------------------------------------
+ idle    | 000000000000000000000001
+ wait1   | 000000000000000000000010
+ wait2   | 000000000001000000000000
+ start   | 000000000010000000000000
+ b0      | 000000000100000000000000
+ b1      | 000000001000000000000000
+ b2      | 000000010000000000000000
+ b3      | 000000100000000000000000
+ b4      | 000001000000000000000000
+ b5      | 000010000000000000000000
+ b6      | 000100000000000000000000
+ b7      | 001000000000000000000000
+ parity  | 010000000000000000000000
+ end1    | 100000000000000000000000
+ a_start | 000000000000000000000100
+ a0      | 000000000000000000001000
+ a1      | 000000000000000000010000
+ a2      | 000000000000000000100000
+ a3      | 000000000000000001000000
+ a4      | 000000000000000010000000
+ a5      | 000000000000000100000000
+ a6      | 000000000000001000000000
+ a7      | 000000000000010000000000
+ a_end1  | 000000000000100000000000
+-------------------------------------
+WARNING:Xst:1293 - FF/Latch <ay_9> has a constant value of 0 in block <D1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <b_reg_1> of sequential type is unconnected in block <M1>.
+WARNING:Xst:2677 - Node <b_reg_2> of sequential type is unconnected in block <M1>.
+
+Synthesizing (advanced) Unit <FrBuf>.
+INFO:Xst:3044 - The ROM <Mrom_mem_out_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <mem_out>.
+INFO:Xst:3225 - The RAM <Mrom_mem_out_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16384-word x 20-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <word_col>      |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <mem_out>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <FrBuf> synthesized (advanced).
+WARNING:Xst:2677 - Node <b_reg_2> of sequential type is unconnected in block <mouse>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# RAMs                                                 : 1
+ 16384x20-bit single-port block RAM                    : 1
+# ROMs                                                 : 4
+ 15x7-bit ROM                                          : 4
+# Multipliers                                          : 11
+ 11x11-bit multiplier                                  : 8
+ 5x5-bit multiplier                                    : 1
+ 6x6-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 48
+ 10-bit adder                                          : 6
+ 10-bit adder carry out                                : 2
+ 10-bit subtractor                                     : 5
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 15
+ 13-bit adder                                          : 1
+ 24-bit adder                                          : 4
+ 25-bit adder                                          : 1
+ 5-bit addsub                                          : 1
+ 6-bit subtractor                                      : 2
+ 9-bit adder                                           : 10
+# Counters                                             : 12
+ 10-bit up counter                                     : 2
+ 10-bit updown counter                                 : 4
+ 12-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+ 7-bit up counter                                      : 2
+ 8-bit up counter                                      : 2
+# Registers                                            : 198
+ Flip-Flops                                            : 198
+# Latches                                              : 4
+ 1-bit latch                                           : 4
+# Comparators                                          : 49
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 2
+ 10-bit comparator lessequal                           : 9
+ 10-bit comparator not equal                           : 2
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 6
+ 11-bit comparator lessequal                           : 7
+ 13-bit comparator greatequal                          : 1
+ 24-bit comparator less                                : 4
+ 25-bit comparator greatequal                          : 1
+ 25-bit comparator less                                : 1
+ 9-bit comparator greater                              : 4
+ 9-bit comparator lessequal                            : 4
+# Xors                                                 : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <ay_9> has a constant value of 0 in block <PixDec>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <B0/y_0> (without init value) has a constant value of 0 in block <CommandTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B1/y_0> (without init value) has a constant value of 0 in block <CommandTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B2/y_0> (without init value) has a constant value of 0 in block <CommandTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B3/y_0> (without init value) has a constant value of 0 in block <CommandTop>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <CommandTop> ...
+
+Optimizing unit <vga> ...
+
+Optimizing unit <FrBuf> ...
+
+Optimizing unit <PixDec> ...
+
+Optimizing unit <mouse> ...
+WARNING:Xst:2677 - Node <M1/b_reg_1> of sequential type is unconnected in block <CommandTop>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <P1/B_7> in Unit <CommandTop> is equivalent to the following 4 FFs/Latches, which will be removed : <P1/B_6> <P1/B_5> <P1/B_4> <P1/B_2> 
+INFO:Xst:2261 - The FF/Latch <P1/B_3> in Unit <CommandTop> is equivalent to the following 2 FFs/Latches, which will be removed : <P1/B_1> <P1/B_0> 
+Found area constraint ratio of 100 (+ 5) on block CommandTop, actual ratio is 16.
+FlipFlop V1/Hcount_0 has been replicated 1 time(s)
+FlipFlop V1/Hcount_1 has been replicated 1 time(s)
+FlipFlop V1/Hcount_2 has been replicated 1 time(s)
+FlipFlop V1/Hcount_3 has been replicated 1 time(s)
+FlipFlop V1/Hcount_4 has been replicated 1 time(s)
+FlipFlop V1/Hcount_5 has been replicated 1 time(s)
+FlipFlop V1/Vcount_0 has been replicated 1 time(s)
+FlipFlop V1/Vcount_1 has been replicated 1 time(s)
+FlipFlop V1/Vcount_2 has been replicated 1 time(s)
+FlipFlop V1/Vcount_3 has been replicated 1 time(s)
+FlipFlop V1/Vcount_4 has been replicated 1 time(s)
+FlipFlop V1/Vcount_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 334
+ Flip-Flops                                            : 334
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CommandTop.ngr
+Top Level Output File Name         : CommandTop
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 2530
+#      GND                         : 1
+#      INV                         : 82
+#      LUT1                        : 161
+#      LUT2                        : 570
+#      LUT3                        : 151
+#      LUT4                        : 320
+#      LUT4_D                      : 8
+#      LUT4_L                      : 12
+#      MUXCY                       : 662
+#      MUXF5                       : 39
+#      VCC                         : 1
+#      XORCY                       : 523
+# FlipFlops/Latches                : 338
+#      FD                          : 31
+#      FDC                         : 29
+#      FDCE                        : 157
+#      FDE                         : 70
+#      FDP                         : 4
+#      FDPE                        : 25
+#      FDR                         : 18
+#      LD                          : 4
+# RAMS                             : 20
+#      RAMB16_S1                   : 20
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      IOBUF                       : 2
+#      OBUF                        : 5
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# MULTs                            : 11
+#      MULT18X18SIO                : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      696  out of   4656    14%  
+ Number of Slice Flip Flops:            338  out of   9312     3%  
+ Number of 4 input LUTs:               1304  out of   9312    14%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    232     3%  
+ Number of BRAMs:                        20  out of     20   100%  
+ Number of MULT18X18SIOs:                11  out of     20    55%  
+ Number of GCLKs:                         1  out of     24     4%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+B0/hit                             | NONE(B0/c)             | 1     |
+clk                                | C1/DCM_SP_inst:CLKFX   | 354   |
+B1/hit                             | NONE(B1/c)             | 1     |
+B2/hit                             | NONE(B2/c)             | 1     |
+B3/hit                             | NONE(B3/c)             | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 215   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.545ns (Maximum Frequency: 94.830MHz)
+   Minimum input arrival time before clock: 5.563ns
+   Maximum output required time after clock: 9.306ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.545ns (frequency: 94.830MHz)
+  Total number of paths / destination ports: 127332 / 862
+-------------------------------------------------------------------------
+Delay:               16.748ns (Levels of Logic = 15)
+  Source:            V1/Hcount_0_1 (FF)
+  Destination:       D1/draw_exp (FF)
+  Source Clock:      clk rising 0.6X
+  Destination Clock: clk rising 0.6X
+
+  Data Path: V1/Hcount_0_1 to D1/draw_exp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.591   1.012  V1/Hcount_0_1 (V1/Hcount_0_1)
+     LUT2:I1->O            1   0.704   0.000  D1/Msub_mult0000_addsub0000_lut<0> (D1/Msub_mult0000_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  D1/Msub_mult0000_addsub0000_cy<0> (D1/Msub_mult0000_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  D1/Msub_mult0000_addsub0000_cy<1> (D1/Msub_mult0000_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  D1/Msub_mult0000_addsub0000_cy<2> (D1/Msub_mult0000_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  D1/Msub_mult0000_addsub0000_cy<3> (D1/Msub_mult0000_addsub0000_cy<3>)
+     MUXCY:CI->O           0   0.059   0.000  D1/Msub_mult0000_addsub0000_cy<4> (D1/Msub_mult0000_addsub0000_cy<4>)
+     XORCY:CI->O          26   0.804   1.260  D1/Msub_mult0000_addsub0000_xor<5> (D1/mult0000_addsub0000<5>)
+     MULT18X18SIO:A5->P9    1   4.525   0.499  D1/Mmult__mult0000 (D1/_mult0000<9>)
+     LUT2:I1->O            1   0.704   0.000  D1/Madd_draw_exp_addsub0004_lut<9> (D1/Madd_draw_exp_addsub0004_lut<9>)
+     MUXCY:S->O            1   0.464   0.000  D1/Madd_draw_exp_addsub0004_cy<9> (D1/Madd_draw_exp_addsub0004_cy<9>)
+     XORCY:CI->O           1   0.804   0.595  D1/Madd_draw_exp_addsub0004_xor<10> (D1/draw_exp_addsub0004<10>)
+     LUT2:I0->O            1   0.704   0.000  D1/Mcompar_draw_exp_cmp_ge0002_lut<10> (D1/Mcompar_draw_exp_cmp_ge0002_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  D1/Mcompar_draw_exp_cmp_ge0002_cy<10> (D1/Mcompar_draw_exp_cmp_ge0002_cy<10>)
+     MUXCY:CI->O           1   0.459   0.424  D1/Mcompar_draw_exp_cmp_ge0002_cy<11> (D1/draw_exp_cmp_ge0002)
+     LUT4:I3->O            1   0.704   0.420  D1/draw_exp_or0000 (D1/draw_exp_or0000)
+     FDR:R                     0.911          D1/draw_exp
+    ----------------------------------------
+    Total                     16.748ns (12.538ns logic, 4.210ns route)
+                                       (74.9% logic, 25.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              5.563ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       M1/b_reg_6 (FF)
+  Destination Clock: clk rising 0.6X
+
+  Data Path: reset to M1/b_reg_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           217   1.218   1.325  reset_IBUF (reset_IBUF)
+     LUT4:I3->O            1   0.704   0.424  M1/b_reg_and0000_SW0 (N141)
+     LUT4:I3->O            5   0.704   0.633  M1/b_reg_and0000 (M1/b_reg_and0000)
+     FDE:CE                    0.555          M1/b_reg_0
+    ----------------------------------------
+    Total                      5.563ns (3.181ns logic, 2.382ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 74 / 7
+-------------------------------------------------------------------------
+Offset:              9.306ns (Levels of Logic = 5)
+  Source:            B2/crater (FF)
+  Destination:       green (PAD)
+  Source Clock:      clk rising 0.6X
+
+  Data Path: B2/crater to green
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.595  B2/crater (B2/crater)
+     LUT4:I0->O            3   0.704   0.566  D1/over_or00001 (D1/over_or0000)
+     LUT3:I2->O            1   0.704   0.424  D1/green11_SW0 (N40)
+     LUT4:I3->O            2   0.704   0.622  D1/green11 (D1/N45)
+     LUT4:I0->O            1   0.704   0.420  D1/green1 (green_OBUF)
+     OBUF:I->O                 3.272          green_OBUF (green)
+    ----------------------------------------
+    Total                      9.306ns (6.679ns logic, 2.627ns route)
+                                       (71.8% logic, 28.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.84 secs
+ 
+--> 
+
+Total memory usage is 392440 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
